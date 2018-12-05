@@ -115,21 +115,21 @@ public class AccountsManager {
 
     //Get server capabilities
     public static OCCapability getCapabilities (String server, String user, String pass) {
-        GetRemoteCapabilitiesOperation getCapabilities = new GetRemoteCapabilitiesOperation();
-        OwnCloudClient client = new OwnCloudClient(Uri.parse(server),
-                NetworkUtils.getMultiThreadedConnManager());
-        client.setCredentials(
-                OwnCloudCredentialsFactory.newBasicCredentials(user, pass));
-        RemoteOperationResult result = getCapabilities.execute(client);
-        return (OCCapability) result.getData().get(0);
-
+//        GetRemoteCapabilitiesOperation getCapabilities = new GetRemoteCapabilitiesOperation();
+//        OwnCloudClient client = new OwnCloudClient(Uri.parse(server),
+//                NetworkUtils.getMultiThreadedConnManager());
+//        client.setCredentials(
+//                OwnCloudCredentialsFactory.newBasicCredentials(user, pass));
+//        RemoteOperationResult result = getCapabilities.execute(client);
+//        return (OCCapability) result.getData().get(0);
+            return null;
     }
 
     //Save capabilities (in device DB)
     public static void saveCapabilities (OCCapability capabilities, String server, String user){
-        FileDataStorageManager fm = new FileDataStorageManager(new Account(buildAccountName(user, server), accountType),
-                MainApp.getAppContext().getContentResolver());
-        fm.saveCapabilities (capabilities);
+//        FileDataStorageManager fm = new FileDataStorageManager(new Account(buildAccountName(user, server), accountType),
+//                MainApp.getAppContext().getContentResolver());
+//        fm.saveCapabilities (capabilities);
     }
 
     //Build account name

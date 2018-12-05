@@ -209,7 +209,7 @@ public class BitmapUtils {
 
         final float hr = (h % 360.0f) / 360f;
         final float sr = fixRawHSLValue(s, 100f, 1/100f);
-        final float lr = fixRawHSLValue(s, 100f, 1/100f);
+        final float lr = fixRawHSLValue(l, 100f, 1/100f);
 
         final float q = (lr < 0.5)
                 ? lr * (1 + sr)

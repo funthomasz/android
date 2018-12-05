@@ -74,7 +74,7 @@ public class AppRater {
         editor.apply();
     }
 
-    private static int daysToMilliseconds(int days){
+    public static int daysToMilliseconds(int days){
             return days * 24 * 60 * 60 * 1000;
     }
 
